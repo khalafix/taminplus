@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport AuthLayout from \"components/AuthLayout\";\n\nvar Auth = function Auth() {\n  return /*#__PURE__*/_jsx(AuthLayout, {});\n};\n\nexport default Auth;","map":null,"metadata":{},"sourceType":"module"}

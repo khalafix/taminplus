@@ -1,0 +1,49 @@
+@font-face {
+  font-family: SDF;
+  src: url(/fonts/fontfa.woff);
+
+}
+
+@font-face {
+  font-family: SDF;
+  src: url(/fonts/fontfa.woff);
+}
+
+
+
+
+/* @font-face {
+    font-family: SDF;
+    src: url(/fonts/iranyekan-regular.woff);
+  }
+  
+  @font-face {
+    font-family: SDF;
+    src: url(/fonts/iranyekan-bold.woff);
+    font-weight: bold;
+  }
+   */
+
+
+  /* 
+  @font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/public/fonts/IRANSans2.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/public/fonts/IRANSans2.woff") format("woff");
+  }
+  
+  
+  @font-face {
+    font-family: IRANSans2;
+    font-style: normal;
+    src: url("/public/fonts/IRANSans2.woff") format("woff");
+  }
+  */

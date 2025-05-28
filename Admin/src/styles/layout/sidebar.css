@@ -1,0 +1,113 @@
+.sideBar {
+  background: #4a4a4a !important;
+  box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+}
+.sideBar .ant-menu {
+  background: #4a4a4a !important;
+}
+.sideBar .ant-menu .ant-menu-item:active,
+.sideBar .ant-menu .ant-menu-submenu-title:active {
+  background: #4a4a4a;
+  color: #fff;
+}
+.sideBar .ant-menu svg {
+  font-size: 20px;
+  margin: 0 8px;
+  vertical-align: bottom;
+}
+.sideBar .ant-menu span {
+  font-size: 16px;
+}
+.sideBar.ant-layout-sider-collapsed .logo b {
+  display: none;
+  visibility: none;
+}
+
+.sideBar .logo {
+  color: #fff;
+  background: #4a4a4a;
+  padding: 22px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 9px -3px rgb(0 0 0 / 20%);
+}
+
+.sideBar .logo img {
+  height: 30px;
+}
+.sideBar .logo b {
+  font-size: 14px;
+  margin: 0 10px;
+  vertical-align: sub;
+}
+.sideBar .logo small {
+  font-size: 10px;
+  font-weight: normal;
+}
+.sideBar .ant-menu.ant-menu-dark,
+.sideBar .ant-menu-dark .ant-menu-sub,
+.sideBar .ant-menu.ant-menu-dark .ant-menu-sub {
+  color: #000;
+  background: #4a4a4a;
+}
+.sideBar .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #3c3c3c;
+  color: #fff;
+}
+.sideBar .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected:after {
+  border-color: orange;
+}
+.sideBar .ant-menu-dark .ant-menu-item-selected .anticon,
+.sideBar .ant-menu-dark .ant-menu-item-selected .anticon + span {
+  color: #000;
+}
+.sideBar .ant-menu-sub .ant-menu-item,
+.sideBar .ant-menu .ant-menu-item,
+.sideBar .ant-menu-vertical-left .ant-menu-item,
+.sideBar .ant-menu-vertical-right .ant-menu-item,
+.sideBar .ant-menu-inline .ant-menu-item,
+.sideBar .ant-menu-vertical .ant-menu-submenu-title,
+.sideBar .ant-menu-vertical-left .ant-menu-submenu-title,
+.sideBar .ant-menu-vertical-right .ant-menu-submenu-title,
+.sideBar .ant-menu-inline .ant-menu-submenu-title {
+  height: 48px !important;
+  margin: 0 !important;
+
+  color: #fff;
+  padding: 15px 12px !important;
+  line-height: 18px !important;
+}
+.sideBar .ant-menu-sub .ant-menu-item {
+  padding: 15px 40px !important;
+  cursor: pointer;
+}
+.ant-menu-submenu {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root
+  .ant-menu-submenu-title
+  > .ant-menu-title-content {
+  padding: 20px 0px;
+}
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #4a4a4a;
+}
+
+.ant-menu,
+.ant-menu-sub,
+.ant-menu-hidden,
+.ant-menu-vertical {
+}
+
+.sideBar .ant-menu:before {
+  display: table;
+  content: "";
+}

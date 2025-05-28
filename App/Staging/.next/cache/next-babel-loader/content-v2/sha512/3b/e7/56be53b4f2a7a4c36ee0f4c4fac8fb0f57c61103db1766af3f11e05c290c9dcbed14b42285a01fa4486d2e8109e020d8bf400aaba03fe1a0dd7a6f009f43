@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { getAllPosts } from 'lib/api';\nexport default async function handler(req, res) {\n  var offset = parseInt(req.query.offset || 0, 10);\n  var data = await getAllPosts({\n    pageNumber: offset\n  });\n  res.statusCode = 200;\n  res.end(JSON.stringify(data));\n}","map":null,"metadata":{},"sourceType":"module"}

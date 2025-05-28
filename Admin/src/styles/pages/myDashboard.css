@@ -1,0 +1,21 @@
+.list-user-item-dashboard {
+  background-color: rgb(249, 248, 239);
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-user-item-dashboard .luid-body .color-customized-icon {
+  color: greenyellow;
+  font-size: large;
+}
+.list-user-item-dashboard .luid-body .color-customize-icon {
+  color: red;
+  font-size: large;
+}
+
+.list-user-item-dashboard .luid-actions {
+  text-align: end;
+}

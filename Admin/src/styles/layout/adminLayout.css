@@ -1,0 +1,29 @@
+.adminLayout {
+  background-color: #f1f2f7;
+  min-height: 100vh;
+}
+.adminLayout .ant-layout {
+  background-color: #f1f2f7;
+  min-height: 100vh;
+}
+
+.adminLayout .ant-layout-content {
+  padding: 0 10px;
+}
+
+.ant-descriptions-bordered.ant-descriptions-small .ant-descriptions-item-label {
+  font-weight: 700;
+  text-align: left;
+}
+
+
+.show-file-box {
+  background-color: #fafafa;
+  padding: 5px;
+  border: 1px dashed #d9d9d9;
+}
+
+
+.list-no-style{
+  list-style-type: none;
+}

@@ -1,0 +1,11 @@
+.footer {
+  text-align: left;
+  color: black;
+  margin-top: 20px;
+  font-size: 12px;
+  background: white;
+}
+
+.ant-layout-footer {
+  padding: 11px 22px;
+}

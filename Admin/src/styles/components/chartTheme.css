@@ -1,0 +1,91 @@
+.chart-theme-animated {
+  background-image: linear-gradient(
+    45deg,
+    #65738e 0%,
+    #65738e 50%,
+    #523b58 50%,
+    #523b58 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-spirited_away {
+  background-image: linear-gradient(
+    45deg,
+    #65738e 0%,
+    #65738e 50%,
+    #523b58 50%,
+    #523b58 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-moonrise_kingdom {
+  background-image: linear-gradient(
+    45deg,
+    #3a1302 0%,
+    #3a1302 50%,
+    #c79f59 50%,
+    #c79f59 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-frozen {
+  background-image: linear-gradient(
+    45deg,
+    #bec4f8 0%,
+    #bec4f8 50%,
+    #a5abee 50%,
+    #a5abee 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-dark {
+  background-image: linear-gradient(
+    45deg,
+    #67b7dc 0%,
+    #67b7dc 50%,
+    #c767dc 50%,
+    #c767dc 100%
+  );
+  border-color: #000;
+}
+
+.chart-theme-kelly {
+  background-image: linear-gradient(
+    45deg,
+    #f3c300 0%,
+    #f3c300 50%,
+    #875692 50%,
+    #875692 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-material {
+  background-image: linear-gradient(
+    45deg,
+    #e91e63 0%,
+    #e91e63 50%,
+    #9c27b0 50%,
+    #9c27b0 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-dataviz {
+  background-image: linear-gradient(
+    45deg,
+    #283250 0%,
+    #283250 50%,
+    #902c2d 50%,
+    #902c2d 100%
+  );
+  border-color: #fff;
+}
+.chart-theme-animated {
+  background-image: linear-gradient(
+    45deg,
+    #67b7dc 0%,
+    #67b7dc 50%,
+    #c767dc 50%,
+    #c767dc 100%
+  );
+  border-color: #fff;
+}

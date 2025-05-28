@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { combineReducers } from 'redux';\nimport shoppingCard from '../reducers/shoppingCardReducer';\nimport navbar from '../reducers/navbarReducer';\nimport blog from '../reducers/articleReducer';\nconst rootReducer = combineReducers({\n  shoppingCard,\n  navbar,\n  blog\n});\nexport default rootReducer;","map":null,"metadata":{},"sourceType":"module"}

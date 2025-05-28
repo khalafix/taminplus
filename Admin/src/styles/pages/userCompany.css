@@ -1,0 +1,85 @@
+.container .user-company-card {
+  background-color: #fdfdfd;
+  border-radius: 5px;
+}
+.user-company-card .ant-card {
+  background-color: #fdfdfd;
+}
+.user-company-card .ant-card-body {
+  background-color: #fdfdfd;
+  height: 150px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.user-company-info {
+  display: flex;
+  height: 100%;
+}
+
+.info-logo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.info-box {
+  padding: 20px;
+  /* display: flex; */
+  align-items: center;
+  flex-direction: column;
+}
+.info-title {
+  margin-bottom: 10px;
+}
+
+.info-actions {
+  display: flex;
+  margin-right: 5px;
+}
+.info-actions .item-button-add {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.user-company-service-card {
+  background-color: white;
+  border-radius: 5px;
+}
+.user-company-service-card .ant-card-body {
+}
+
+.user-company-message-card {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.manufacture-card .ant-card {
+  background-color: #b0ba97 !important;
+}
+
+.manufacture-card .ant-card .ant-card-body {
+  height: 250px;
+  border-radius: 10px;
+}
+.supplier-card .ant-card {
+  background-color: #9ac2d6 !important;
+}
+.supplier-card .ant-card .ant-card-body {
+  height: 250px;
+  border-radius: 10px;
+}
+
+.service-provider-card .ant-card {
+  background-color: #706d58 !important;
+}
+.service-provider-card .ant-card .ant-card-body {
+  height: 250px;
+  border-radius: 10px;
+}
+
+.user-company-service-card .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

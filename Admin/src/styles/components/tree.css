@@ -1,0 +1,30 @@
+.tree-search-value {
+  color: #d9534f;
+}
+
+.ant-tree-node-selected {
+  background-color: #faa61a !important;
+}
+
+.tree-deactivate {
+  background-color: #d9534f;
+  border-radius: 10%;
+}
+.tree-deleted {
+  background-color: #d9d9d9;
+  border-radius: 10%;
+}
+
+.ant-tree-title {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.ant-tree-show-line .ant-tree-indent-unit:before {
+  position: absolute !important;
+  top: 0 !important;
+  right: 12px !important;
+  bottom: -4px !important;
+  border-right: 1px solid #d9d9d9 !important;
+  content: "" !important;
+}

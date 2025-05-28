@@ -1,0 +1,50 @@
+.chart {
+  width: 100%;
+  height: 100%;
+}
+.chart svg {
+  letter-spacing: normal;
+}
+
+.chart--102 {
+}
+.chart--103 {
+  direction: ltr;
+}
+.chart--1 {
+}
+.chart--7 {
+}
+.chart--6 {
+}
+.chart--8 {
+}
+
+.amcharts-amexport-top .amcharts-amexport-item > .amcharts-amexport-menu {
+  top: -3px !important;
+  left: 2px;
+}
+.amcharts-amexport-item {
+  font-size: 12px;
+}
+
+.amcharts-amexport-item
+  .amcharts-amexport-item-level-2
+  .amcharts-amexport-item-custom {
+  width: 100px !important;
+}
+.amcharts-amexport-item
+  .amcharts-amexport-item-level-1
+  .amcharts-amexport-item-custom {
+  width: 105px !important;
+}
+
+.amcharts-amexport-label
+  .amcharts-amexport-label-level-1
+  .amcharts-amexport-item-blank {
+  width: 100px !important;
+}
+
+.amcharts-amexport-menu .amcharts-amexport-menu-level-1 li a {
+  color: black;
+}

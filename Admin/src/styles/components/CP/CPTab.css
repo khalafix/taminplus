@@ -1,0 +1,8 @@
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+   color:#000000 
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active{
+ background: #7cdffa83 
+}
+  

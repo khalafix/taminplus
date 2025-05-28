@@ -1,0 +1,204 @@
+.navigation {
+  background: #d7d7d7 !important;
+  margin: 10px;
+  padding: 0 15px;
+  line-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+  border-radius: 6px;
+}
+.navigation .navMenu {
+  display: flex;
+}
+.navigation .ant-space-item {
+  line-height: 0;
+}
+.navigation .navIcon {
+  color: #000;
+  background-color: #f1f2f7;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 50%;
+  font-size: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+.navigation .userInformation {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background: #f1f2f7;
+  border-radius: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.navigation .userInformation small {
+  padding: 0 10px;
+  font-size: 12px;
+}
+.navigation .search .ant-input-wrapper {
+  width: 330px;
+}
+.navigation .search .ant-input-wrapper input {
+  border-radius: 0 20px 20px 0;
+  border: none;
+  background: #f1f2f7;
+  height: 40px;
+  font-size: 12px;
+}
+.navigation .search .ant-input-wrapper .ant-input-group-addon {
+  border-right: 0;
+  border-left: 1px solid #f1f2f7;
+  border: none;
+  background: #f1f2f7;
+  border-radius: 20px 0 0 20px;
+  font-size: 18px;
+  line-height: 1px;
+}
+.languages {
+  max-width: 150px !important;
+  min-width: 150px !important;
+}
+.languages,
+.messages {
+  max-width: 300px;
+  min-width: 300px;
+}
+.languages .spin-loading,
+.messages .spin-loading {
+  text-align: center;
+}
+.languages .messageTime,
+.messages .messageTime {
+  direction: ltr;
+}
+.languages .ant-popover-inner,
+.messages .ant-popover-inner {
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+.languages .ant-popover-inner-content,
+.messages .ant-popover-inner-content {
+  padding: 0;
+}
+.languages .ant-collapse:last-child .ant-collapse-item,
+.messages .ant-collapse:last-child .ant-collapse-item {
+  border: none !important;
+}
+.languages .ant-collapse-content > .ant-collapse-content-box,
+.messages .ant-collapse-content > .ant-collapse-content-box {
+  padding: 10px !important;
+  text-align: justify;
+  font-size: 12px;
+}
+.languages .ant-collapse:first-child,
+.messages .ant-collapse:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.languages .ant-collapse .ant-collapse-item,
+.messages .ant-collapse .ant-collapse-item {
+  border-color: #e8e8e8 !important;
+}
+.languages .ant-collapse:first-child .ant-collapse-header,
+.messages .ant-collapse:first-child .ant-collapse-header {
+  border-radius: 6px 6px 0 0;
+}
+.languages .ant-collapse:last-child .ant-collapse-header,
+.messages .ant-collapse:last-child .ant-collapse-header {
+  border-radius: 0 0 6px 6px;
+}
+.languages .ant-collapse-header,
+.messages .ant-collapse-header {
+  background-color: #fff;
+}
+.languages .ant-divider-horizontal,
+.messages .ant-divider-horizontal {
+  margin: 0 !important;
+}
+.languages button,
+.messages button {
+  display: block;
+  width: 100% !important;
+  border: none;
+  box-shadow: none;
+  height: 43px !important;
+  text-align: right;
+}
+.languages button:hover,
+.messages button:hover {
+  color: #54c5d0;
+}
+.messageList {
+  max-width: 300px;
+}
+.messageList .message {
+  display: flex;
+  margin-top: 5px !important;
+}
+.messageList .message p {
+  display: flex;
+  color: #3f3f4b;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 10px;
+}
+.messageList .message p time {
+  margin: 0 5px;
+}
+.messageList .message p:last-child {
+  margin: 0 10px !important;
+}
+.notifLink {
+  max-width: 300px;
+}
+.notifLink .notifIcon {
+  padding-left: 5px;
+  font-size: 18px;
+}
+.notifLink .text {
+  display: flex;
+  margin-top: 12px !important;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.notifLink .text p {
+  display: flex;
+  color: #54c5d0;
+  line-height: 14px;
+  margin-left: 10px;
+}
+.userInfo {
+  width: 200px;
+  overflow: hidden;
+  border-radius: 6px !important;
+}
+.userInfo li {
+  padding: 10px 5px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.userInfo li a {
+  margin: 0;
+  padding: 0;
+}
+.userInfo li.ant-dropdown-menu-item:hover,
+.userInfo li.ant-dropdown-menu-submenu-title:hover {
+  color: #54c5d0;
+  background: transparent;
+}
+.userInfo li:hover a {
+  color: #54c5d0;
+}
+.userInfo li:last-child {
+  background-color: #dedede;
+  border-bottom: none;
+}
+.userInfo li:last-child:hover {
+  background: #dedede;
+}
+.userInfo li svg {
+  font-size: 18px;
+  vertical-align: middle;
+  margin: 0 5px;
+}

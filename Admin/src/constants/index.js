@@ -1,0 +1,225 @@
+// Message
+import { FormattedMessage } from "react-intl";
+
+export const ListPermissions = {
+  ACCEPT_RING_TONE_BY_ADMINS: "ACCEPT_RING_TONE_BY_ADMINS",
+  ACCEPT_RING_TONE_BY_CP: "ACCEPT_RING_TONE_BY_CP",
+  ACTIVE_SUBSCRIBERS_TONES: "SUBSCRIBER_TONE_BATCH_ADMIN",
+  ADD_BATCH_RING_TONE: "ADD_BATCH_RING_TONE",
+  ADD_DISCOUNT: "DISCOUNT_MANAGEMENT",
+  ADD_GROUP: "RING_TONE_GROUP_MANAGEMENT",
+  ADD_NOTIFICATION: "NOTIFICATION_ADMIN",
+  ADD_ROLE: "ADD_ROLE",
+  ADD_SINGLE_RING_TONE: "ADD_SINGLE_RING_TONE",
+  ADD_SLIDER: "BANNER_MANAGEMENT",
+  ADD_TAG: "RING_TONE_TAG_MANAGEMENT",
+  ADD_USER: "ADD_USER",
+  ADD_WHITELIST: "WHITELIST_ADMIN",
+  ADD_TUTORIAL: "TUTORIAL_MANAGEMENT",
+  ADD_ALBUM: "ALBUM_MANAGEMENT",
+  ADD_SERVICE: "SERVICE_MANAGEMENT",
+  DEACTIVATE_SUBSCRIBER_TONE: "SUBSCRIBER_TONE_ADMIN",
+  DEACTIVATE_SUBSCRIBERS_TONES: "SUBSCRIBER_TONE_BATCH_ADMIN",
+  DEACTIVATES_RING_TONE_BY_ADMINS: "DEACTIVATES_RING_TONE_BY_ADMINS",
+  DEFAULT: "DEFAULT",
+  DELETE_GROUP: "RING_TONE_GROUP_MANAGEMENT",
+  DELETE_NOTIFICATION: "NOTIFICATION_ADMIN",
+  DELETE_ROLE: "DELETE_ROLE",
+  DELETE_SLIDER: "BANNER_MANAGEMENT",
+  DELETE_TAG: "RING_TONE_TAG_MANAGEMENT",
+  DELETE_USER: "DELETE_USER",
+  DELETE_WHITELIST: "WHITELIST_ADMIN",
+  DETAILS_SLIDER: "BANNER_MANAGEMENT",
+  DELETE_TUTORIAL: "TUTORIAL_MANAGEMENT",
+  DOWNLOAD_LIST_TONES: "DOWNLOAD_LIST_TONE",
+  DELETE_ALBUM: "ALBUM_MANAGEMENT",
+  DELETE_SERVICE: "SERVICE_MANAGEMENT",
+  EDIT_DISCOUNT: "DISCOUNT_MANAGEMENT",
+  EDIT_FEATURED: "FEATURE_MANAGEMENT",
+  EDIT_GROUP: "RING_TONE_GROUP_MANAGEMENT",
+  EDIT_NOTIFICATION: "NOTIFICATION_ADMIN",
+  EDIT_ROLE: "EDIT_ROLE",
+  EDIT_SLIDER: "BANNER_MANAGEMENT",
+  EDIT_TAG: "RING_TONE_TAG_MANAGEMENT",
+  EDIT_TONE: "EDIT_RING_TONE_INFO",
+  EDIT_USER: "EDIT_USER",
+  EDIT_WHITELIST: "WHITELIST_ADMIN",
+  EDIT_TUTORIAL: "TUTORIAL_MANAGEMENT",
+  EDIT_ALBUM: "ALBUM_MANAGEMENT",
+  EDIT_SERVICE: "SERVICE_MANAGEMENT",
+  GET_DISCOUNT_LIST: "DISCOUNT_VIEW",
+  GET_FEATURED_LIST: "FEATURE_VIEW",
+  GET_GROUP_LIST: "RING_TONE_GROUP_MANAGEMENT",
+  GET_NOTIFICATION_LIST: "NOTIFICATION_ADMIN",
+  GET_PRIVILEGE_LIST: "GET_PRIVILEGE_LIST",
+  GET_REPORTS_AUDIT: "VIEW_AUDIT_REPORT",
+  GET_REPORTS_FINANCIAL: "VIEW_FINANCIAL_REPORT",
+  GET_REPORTS_HISTORY_SUBSCRIBERS: "SUBSCRIBER_TONE_ADMIN",
+  GET_REPORTS_SERVICE: "VIEW_SERVICE_REPORT",
+  GET_ROLE_LIST: "GET_ROLE_LIST",
+  GET_SLIDER_LIST: "BANNER_MANAGEMENT",
+  GET_TAG_LIST: "RING_TONE_TAG_VIEW",
+  GET_TONE_LIST: "VIEW_RING_TONE",
+  GET_USER_LIST: "GET_USER_LIST",
+  GET_USERNAME_LIST: "GET_USERNAME_LIST",
+  GET_WHITELIST_LIST: "WHITELIST_ADMIN",
+  GET_TUTORIAL_LIST: "TUTORIAL_MANAGEMENT",
+  GET_SERVICE_LIST: "SERVICE_MANAGEMENT",
+  GET_ALBUM_LIST: "ALBUM_MANAGEMENT",
+  NOTIFICATION_ACCESS: "NOTIFICATION_ACCESS",
+  PUBLISH_RING_TONE_BY_ADMINS: "PUBLISH_RING_TONE_BY_ADMINS",
+  REJECT_RING_TONE_BY_ADMINS: "REJECT_RING_TONE_BY_ADMINS",
+  RESET_PASSWORD_USER: "RESET_PASSWORD",
+  STOP_DISCOUNT: "DISCOUNT_MANAGEMENT",
+  SNAP_MANAGEMENT: "SNAP_MANAGEMENT",
+  SUSPEND_RING_TONE_BY_ADMINS: "SUSPEND_RING_TONE_BY_ADMINS",
+  VIEW_RING_TONE_ADMINS_USER: "VIEW_RING_TONE_ADMINS",
+  VIEW_FINANCIAL_REPORT_ADMIN: "VIEW_FINANCIAL_REPORT_ADMIN",
+  VIEW_SERVICE_REPORT_ADMIN: "VIEW_SERVICE_REPORT_ADMIN",
+  VIEW_RING_TONE_ADMINS: "VIEW_RING_TONE_ADMINS",
+};
+
+/// for audit report ///
+
+export const AuditType = () => {
+  return [
+    { value: "ADD_USER", text: <FormattedMessage id="ADD_USER" /> },
+    { value: "UPDATE_USER", text: <FormattedMessage id="UPDATE_USER" /> },
+    { value: "DELETE_USER", text: <FormattedMessage id="DELETE_USER" /> },
+    { value: "ADD_ROLE", text: <FormattedMessage id="ADD_ROLE" /> },
+    { value: "UPDATE_ROLE", text: <FormattedMessage id="UPDATE_ROLE" /> },
+    { value: "DELETE_ROLE", text: <FormattedMessage id="DELETE_ROLE" /> },
+    {
+      value: "CHANGE_PASSWORD",
+      text: <FormattedMessage id="CHANGE_PASSWORD" />,
+    },
+    { value: "RESET_PASSWORD", text: <FormattedMessage id="RESET_PASSWORD" /> },
+    { value: "ADD_DISCOUNT", text: <FormattedMessage id="ADD_DISCOUNT" /> },
+    {
+      value: "UPDATE_DISCOUNT",
+      text: <FormattedMessage id="UPDATE_DISCOUNT" />,
+    },
+    { value: "STOP_DISCOUNT", text: <FormattedMessage id="STOP_DISCOUNT" /> },
+    {
+      value: "ADD_NOTIFICATION",
+      text: <FormattedMessage id="ADD_NOTIFICATION" />,
+    },
+    {
+      value: "UPDATE_NOTIFICATION",
+      text: <FormattedMessage id="UPDATE_NOTIFICATION" />,
+    },
+    {
+      value: "DELETE_NOTIFICATION",
+      text: <FormattedMessage id="DELETE_NOTIFICATION" />,
+    },
+    {
+      value: "ADD_RING_TONE_GROUP",
+      text: <FormattedMessage id="ADD_RING_TONE_GROUP" />,
+    },
+    {
+      value: "UPDATE_RING_TONE_GROUP",
+      text: <FormattedMessage id="UPDATE_RING_TONE_GROUP" />,
+    },
+    {
+      value: "DELETE_RING_TONE_GROUP",
+      text: <FormattedMessage id="DELETE_RING_TONE_GROUP" />,
+    },
+    {
+      value: "ADD_RING_TONE_TAG",
+      text: <FormattedMessage id="ADD_RING_TONE_TAG" />,
+    },
+    {
+      value: "UPDATE_RING_TONE_TAG",
+      text: <FormattedMessage id="UPDATE_RING_TONE_TAG" />,
+    },
+    {
+      value: "DELETE_RING_TONE_TAG",
+      text: <FormattedMessage id="DELETE_RING_TONE_TAG" />,
+    },
+
+    {
+      value: "ADD_WHITELIST_ENTRY",
+      text: <FormattedMessage id="ADD_WHITELIST_ENTRY" />,
+    },
+    {
+      value: "UPDATE_WHITELIST_ENTRY",
+      text: <FormattedMessage id="UPDATE_WHITELIST_ENTRY" />,
+    },
+    {
+      value: "DELETE_WHITELIST_ENTRY",
+      text: <FormattedMessage id="DELETE_WHITELIST_ENTRY" />,
+    },
+
+    /*  { value: "REMOVE_VALID_IP", text:<FormattedMessage id="REMOVE_VALID_IP" />  },
+     { value: "SET_VALID_IP", text: <FormattedMessage id="SET_VALID_IP" />  },
+    */
+
+    { value: "ACTION_STATUS", text: <FormattedMessage id="ACTION_STATUS" /> },
+    {
+      value: "DEACTIVATE_RING_TONE_BY_ADMIN",
+      text: <FormattedMessage id="DEACTIVATE_RING_TONE_BY_ADMIN" />,
+    },
+    {
+      value: "PUBLISH_RING_TONE_BY_ADMIN",
+      text: <FormattedMessage id="PUBLISH_RING_TONE_BY_ADMIN" />,
+    },
+    {
+      value: "SUSPEND_RING_TONE_BY_ADMIN",
+      text: <FormattedMessage id="SUSPEND_RING_TONE_BY_ADMIN" />,
+    },
+    {
+      value: "ACCEPT_RING_TONE_BY_ADMIN",
+      text: <FormattedMessage id="ACCEPT_RING_TONE_BY_ADMIN" />,
+    },
+  ];
+};
+
+export const SortDirection = () => {
+  return [
+    { value: "DESC", text: "DESC" },
+    { value: "ASC", text: "ASC" },
+  ];
+};
+
+export const graphType = {
+  /* RADAR: 1,
+  GAUGE: 2,
+  BAR: 3,
+  COLUMN: 4,
+  LINEAR: 5,
+  AREA: 6,
+  SANKEY: 7,
+  WORDCLOUD: 8,
+  METER: 101,
+  GROUPED_BAR: 102,
+  TREE_MAP: 103,
+  RADAR_FLOWER: 104, */
+  TABLE: 101,
+  PIE: 102,
+  LINE: 103,
+  BAR: 104,
+  GAUGE: 105,
+  SINGLE: 106,
+  CIRCLE_PROGRESS: 115,
+  CURVE: 108,
+  RADAR: 109,
+  PARETO: 110,
+  HISTOGRAM: 111,
+  BULLET: 113,
+  MULTI: 116,
+  STACKED: 117,
+  PYRAMID: 118,
+  DONUT: 119,
+  SEMI_CIRCLE: 120,
+  VARIANCE_INDICATORS: 121,
+  STACKED_HORIZONTAL: 122,
+  BAR_HORIZONTAL: 123,
+  COMBINED_BULLET: 124,
+};
+
+export const enumIndexTemplateType = {
+  Organization: 1,
+  OrganizationUnit: 2,
+  discipline: 3,
+  Project: 4,
+};

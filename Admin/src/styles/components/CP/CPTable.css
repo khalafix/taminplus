@@ -1,0 +1,11 @@
+.ant-table-small .ant-table-thead > tr > th {
+    /* background-color: #77cc6d; */
+    background-color: #BCEFFC;
+}
+
+.table-row-light {
+    background-color: #ffffff;
+}
+.table-row-dark {
+    background-color: #f7f7f7;
+}

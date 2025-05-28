@@ -1,0 +1,119 @@
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 23;
+  top: 0;
+  right: -400px;
+  left: initial;
+  background: #ffffff;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 3px 0px 19px -7px black;
+  border-right: 5px solid #0c59db;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #1d0404;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  text-align: right;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff3d;
+}
+
+.sidenav-mobile a{
+  /* display: inline; */
+  width: auto;
+}
+
+
+
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.dropdown-btn.active {
+  background-color: #3b5575;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.sidenav .dropdown-container {
+  display: none;
+  background-color: #ededed;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: -15%;
+  font-size: 36px;
+  margin-left: 50px;
+  text-align: left;
+  border: none;
+  display: inline-block;
+  width: auto;
+}
+
+.mobile-menu-header {
+  width: 100%;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    z-index: 21;
+    background: #fdfdfd;
+    flex-direction: row-reverse;
+   box-sizing: border-box;
+   border-bottom: 2px solid #e6e6e6;
+}
+.mobile-side-layer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #55555566;
+  z-index: 22;
+  display: none;
+  transition: 0.5s all ease-in-out;
+}

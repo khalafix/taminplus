@@ -1,0 +1,72 @@
+{
+  "name": "sepidaria",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "SepidAria",
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.10.20",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@tinymce/tinymce-react": "^4.2.0",
+    "antd": "^4.16.8",
+    "antd-jalali": "^0.9.4",
+    "apexcharts": "^3.35.4",
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "connected-react-router": "6.4.0",
+    "history": "4.10.1",
+    "jalali-plugin-dayjs": "^1.1.4",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-color": "^2.19.3",
+    "react-countup": "^5.0.0",
+    "react-datepicker2": "^3.3.13",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.4",
+    "react-grid-layout": "^1.2.5",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "react-intl": "^5.20.4",
+    "react-redux": "^8.0.2",
+    "react-responsive": "^9.0.0-beta.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.1",
+    "react-sizeme": "^3.0.1",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.1",
+    "save": "^2.4.0",
+    "uuidv4": "^6.2.11",
+    "web-vitals": "^2.1.0",
+    "zaman": "^2.1.1"
+  },
+  "scripts": {
+    "start": "set PORT=3003 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

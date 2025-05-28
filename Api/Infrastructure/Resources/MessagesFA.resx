@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcceptRegisterPayment" xml:space="preserve">
+    <value>پرداخت درخواست عضویت شما در تاریخ {0} تایید شد</value>
+  </data>
+  <data name="AcceptRegisterRequest" xml:space="preserve">
+    <value>درخواست عضویت شما در تاریخ {0} تایید شد</value>
+  </data>
+  <data name="AcceptRequestBadBackgroundCertificate" xml:space="preserve">
+    <value>  گواهی عدم سوء پیشینه شما در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="AcceptRequestByProvinceMangerForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما توسط رییس نظام استان در تاریخ {0} تایید شد</value>
+  </data>
+  <data name="AcceptRequestByRepresentativeOfTheOrganizationForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما توسط نماینده سازمان در تاریخ {0} تایید شد و در انتظار پرداخت صدور پروانه توسط شما می باشد</value>
+  </data>
+  <data name="AcceptRequestIssueDuplicateCard" xml:space="preserve">
+    <value>تایید اولیه درخواست صدور کارت المثنی در تاریخ {0} انجام شد و در انتظار پرداخت هزینه توسط شما می باشد</value>
+  </data>
+  <data name="AcceptRequestMemberExtension" xml:space="preserve">
+    <value>تایید اولیه درخواست تمدید عضویت در تاریخ {0} انجام شد و در انتظار پرداخت هزینه توسط شما می باشد</value>
+  </data>
+  <data name="AcceptRequestSuccessByUser" xml:space="preserve">
+    <value>تایید درخواست توسط {0} انجام شد</value>
+  </data>
+  <data name="AcceptUpgradeEducationRequest" xml:space="preserve">
+    <value>تایید نهایی درخواست ارتقا مدرک تحصیلی در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="AcceptYourPhoneNumber" xml:space="preserve">
+    <value>شماره موبایل خود را تایید کنید</value>
+  </data>
+  <data name="AddFavoriteProduct" xml:space="preserve">
+    <value>محصول در لیست علاقه مندی ها ذخیره شد</value>
+  </data>
+  <data name="AddOrderSuccess" xml:space="preserve">
+    <value>درخواست خرید شما با موفقیت انجام شد</value>
+  </data>
+  <data name="ApprovedWithDestinationForMemberTransferRequest" xml:space="preserve">
+    <value>تایید درخواست انتقال توسط استان مقصد در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="ApprovedWithHeadquartersForMemberTransferRequest" xml:space="preserve">
+    <value> تایید درخواست انتقال توسط سازمان در تاریخ {0} انجام شد و  در انتظار پرداخت هزینه توسط شما می باشد</value>
+  </data>
+  <data name="ApprovedWithSourceForMemberTransferRequest" xml:space="preserve">
+    <value>تایید درخواست انتفال توسط استان مبدا در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="CanNotDeleteThisMessage" xml:space="preserve">
+    <value>امکان حذف این پیام وجود ندارد</value>
+  </data>
+  <data name="CanNotDeleteThisMessage1" xml:space="preserve">
+    <value>امکان حذف این پیام وجود ندارد</value>
+  </data>
+  <data name="CaptchaInvalid" xml:space="preserve">
+    <value>کد امنیتی ارسال صحیح نمی باشد.</value>
+  </data>
+  <data name="CheckAndAcceptWithManagerUpgradeEducationRequest" xml:space="preserve">
+    <value>تایید اولیه درخواست ارتقا مدرک تحصیلی در تاریخ {0} انجام شد و در انتظار  پرداخت هزینه توسط شما می باشد</value>
+  </data>
+  <data name="CheckRequestByExpertForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  توسط کارشناس در دست بررسی می باشد</value>
+  </data>
+  <data name="CheckRequestByProvinceMangerForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما توسط  رییس نظام استان در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="CheckRequestForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="CheckRequestSuccessByUser" xml:space="preserve">
+    <value>بررسی درخواست توسط {0} انجام شد</value>
+  </data>
+  <data name="CodeExists" xml:space="preserve">
+    <value>کد وارد شده تکراری می باشد و قبلا استفاده شده است</value>
+  </data>
+  <data name="CodeExists1" xml:space="preserve">
+    <value>کد وارد شده تکراری می باشد و قبلا استفاده شده است</value>
+  </data>
+  <data name="CodeIsExpire" xml:space="preserve">
+    <value>کد وارد شده منقضی شده است</value>
+  </data>
+  <data name="CodeNotExists" xml:space="preserve">
+    <value>کد وارد شده صحیح نمی باشد</value>
+  </data>
+  <data name="CodeNotExists1" xml:space="preserve">
+    <value>کد وارد شده صحیح نمی باشد</value>
+  </data>
+  <data name="CommitCompanyRequestSucc" xml:space="preserve">
+    <value>درخواست شما برای بررسی با موفقیت ثبت شد</value>
+  </data>
+  <data name="CommitCompanyRequestSucc1" xml:space="preserve">
+    <value>درخواست شما برای بررسی با موفقیت ثبت شد</value>
+  </data>
+  <data name="CommitRequestSucc" xml:space="preserve">
+    <value>درخواست شما برای بررسی با موفقیت ثبت شد</value>
+  </data>
+  <data name="CommitRequestSuccByUser" xml:space="preserve">
+    <value>ثبت درخواست توسط {0} انجام شد</value>
+  </data>
+  <data name="CommunicationError" xml:space="preserve">
+    <value>خطا در برقراری ارتباط</value>
+  </data>
+  <data name="CommunicationError1" xml:space="preserve">
+    <value>خطا در برقراری ارتباط</value>
+  </data>
+  <data name="CompletePersonalInformation" xml:space="preserve">
+    <value>اطلاعات کاربری خود را تکمیل نمایید</value>
+  </data>
+  <data name="ConfrimationEmailLink" xml:space="preserve">
+    <value>برای Active سازی حساب کاربری خود روی لینک زیر کلیک کنید \n https://localhost:3001/Confirmation/{0}</value>
+  </data>
+  <data name="ConfrimationEmailLink1" xml:space="preserve">
+    <value>برای Active سازی حساب کاربری خود روی لینک زیر کلیک کنید \n https://localhost:3001/Confirmation/{0}</value>
+  </data>
+  <data name="CreateNezamCode" xml:space="preserve">
+    <value>کد نظام دامپزشکی شما در تاریخ {0} صادر  شد</value>
+  </data>
+  <data name="CurrentUserAlreadyRegistered" xml:space="preserve">
+    <value>کاربری با این مشخصات قبلا ثبت نام کرده است</value>
+  </data>
+  <data name="DeleteFavoriteProduct" xml:space="preserve">
+    <value>محصول از لیست علاقه مندی ها حذف شد</value>
+  </data>
+  <data name="DeleteSuccessful" xml:space="preserve">
+    <value>حذف با موفقیت انجام شد</value>
+  </data>
+  <data name="DeleteSuccessful1" xml:space="preserve">
+    <value>حذف با موفقیت انجام شد</value>
+  </data>
+  <data name="DeliveredOrder" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0} تحویل داده شد</value>
+  </data>
+  <data name="EmailFromName" xml:space="preserve">
+    <value>لینک Active سازی حساب کاربری سامانه همت</value>
+  </data>
+  <data name="EmailFromName1" xml:space="preserve">
+    <value>لینک Active سازی حساب کاربری سامانه همت</value>
+  </data>
+  <data name="EmailIsAlreadyRegistered" xml:space="preserve">
+    <value>ایمیل  قبلا ثبت شده است</value>
+  </data>
+  <data name="EmailUlreadyExists" xml:space="preserve">
+    <value>ایمیل وارد شده قبلا توسط کاربر دیگری استفاده شده است</value>
+  </data>
+  <data name="EmailUlreadyExists1" xml:space="preserve">
+    <value>ایمیل وارد شده قبلا توسط کاربر دیگری استفاده شده است</value>
+  </data>
+  <data name="EnNameAlreadyExists" xml:space="preserve">
+    <value>عنوان خارجی تکراری است</value>
+  </data>
+  <data name="EnterUserNameAndPassword" xml:space="preserve">
+    <value>نام کاربری و رمز عبور را وارد کنید</value>
+  </data>
+  <data name="EnterUserNameAndPassword1" xml:space="preserve">
+    <value>نام کاربری و رمز عبور را وارد کنید</value>
+  </data>
+  <data name="ErrorForAddData" xml:space="preserve">
+    <value>خطا در ثبت اطلاعات</value>
+  </data>
+  <data name="ErrorForAddData1" xml:space="preserve">
+    <value>خطا در ثبت اطلاعات</value>
+  </data>
+  <data name="ErrorForCommunicationOnlinePayment" xml:space="preserve">
+    <value>خطا در برقراری ارتباط با درگاه پرداخت</value>
+  </data>
+  <data name="ErrorForDeleteData" xml:space="preserve">
+    <value>خطا در حذف اطلاعات</value>
+  </data>
+  <data name="ErrorForDeleteData1" xml:space="preserve">
+    <value>خطا در حذف اطلاعات</value>
+  </data>
+  <data name="ErrorForEditData" xml:space="preserve">
+    <value>خطا در ویرایش اطلاعات</value>
+  </data>
+  <data name="ErrorForEditData1" xml:space="preserve">
+    <value>خطا در ویرایش اطلاعات</value>
+  </data>
+  <data name="ErrorForGetData" xml:space="preserve">
+    <value>خطا در بارگذاری اطلاعات</value>
+  </data>
+  <data name="ErrorForGetData1" xml:space="preserve">
+    <value>خطا در بارگذاری اطلاعات</value>
+  </data>
+  <data name="EvalutionRequestByExpertForLicenseRequest" xml:space="preserve">
+    <value>ارزیابی درخواست پروانه شما توسط کارشناس در تاریخ {0} ثبت و به به کارتابل دبیر استان ارسال شد</value>
+  </data>
+  <data name="ExpireConfirmationCode" xml:space="preserve">
+    <value>مدت زمان استفاده از کد Active سازی پایان یافته است و کد Active سازی ارسالی نامعتبر می باشد</value>
+  </data>
+  <data name="ExpireConfirmationCode1" xml:space="preserve">
+    <value>مدت زمان استفاده از کد Active سازی پایان یافته است و کد Active سازی ارسالی نامعتبر می باشد</value>
+  </data>
+  <data name="HaveNotEducationHistories" xml:space="preserve">
+    <value>اطلاعات تحصیلی برای این کاربر وجود ندارد</value>
+  </data>
+  <data name="HistoryDataRowIsNotAllowEmpty" xml:space="preserve">
+    <value>رکوردی برای ذخیره ارسال نشده است</value>
+  </data>
+  <data name="HistoryDataRowIsNotAllowEmpty1" xml:space="preserve">
+    <value>رکوردی برای ذخیره ارسال نشده است</value>
+  </data>
+  <data name="InProgressOrder" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0} در حال بررسی می باشد</value>
+  </data>
+  <data name="InvalidConfirmationCode" xml:space="preserve">
+    <value>کد Active سازی ارسالی صحیح نمی باشد</value>
+  </data>
+  <data name="InvalidConfirmationCode1" xml:space="preserve">
+    <value>کد Active سازی ارسالی صحیح نمی باشد</value>
+  </data>
+  <data name="InvalidConfirmPassword" xml:space="preserve">
+    <value>تکرار رمز عبور با رمز عبور یکسان نمی باشد</value>
+  </data>
+  <data name="InvalidConfirmPassword1" xml:space="preserve">
+    <value>تکرار رمز عبور با رمز عبور یکسان نمی باشد</value>
+  </data>
+  <data name="InvalidEmailFormat" xml:space="preserve">
+    <value>قالب ایمیل نامعتبر است</value>
+  </data>
+  <data name="InvalidPhoneNumberFormat" xml:space="preserve">
+    <value>قالب تلفن همراه نامعتبر است</value>
+  </data>
+  <data name="InvalidRefreshToken" xml:space="preserve">
+    <value>نامعتبر است Token</value>
+  </data>
+  <data name="InvalidRefreshToken1" xml:space="preserve">
+    <value>نامعتبر است Token</value>
+  </data>
+  <data name="InvalidResetToken" xml:space="preserve">
+    <value>Invalid Reset Token</value>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>کد ارسالی صحیح نمی باشد</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>نام کاربری یافت نشد</value>
+  </data>
+  <data name="InvalidUserNameFormat" xml:space="preserve">
+    <value>فرمت نام کاربری نامعتبر است</value>
+  </data>
+  <data name="InvalidUserNameOrPassword" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور اشتباه است</value>
+  </data>
+  <data name="InvalidUserNameOrPassword1" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور اشتباه است</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>آیتمی با مقدار ارسالی پیدا نشد</value>
+  </data>
+  <data name="ItemNotFound1" xml:space="preserve">
+    <value>آیتمی با مقدار ارسالی پیدا نشد</value>
+  </data>
+  <data name="ItisNotPossibleToPay" xml:space="preserve">
+    <value>امکان پرداخت وجود ندارد</value>
+  </data>
+  <data name="KoponExpired" xml:space="preserve">
+    <value>کوپن تخفیف منقضی شده است</value>
+  </data>
+  <data name="KoponIsActived" xml:space="preserve">
+    <value>کوپن تخفیف شما اعمال شد</value>
+  </data>
+  <data name="KoponNotValid" xml:space="preserve">
+    <value>کوپن تخفیفی یافت نشد</value>
+  </data>
+  <data name="LockedRequestInProgressRequest" xml:space="preserve">
+    <value> شما درخواست در حال بررسی دارید</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>اطلاعاتی یافت نشد</value>
+  </data>
+  <data name="NotFound1" xml:space="preserve">
+    <value>اطلاعاتی یافت نشد</value>
+  </data>
+  <data name="NotifeForForLicenseRequestDoNotAnswer" xml:space="preserve">
+    <value>کاربر گرامی درصورتی که درخواست پروانه شما ، در مرحله ارسال درخواست برای نماینده سازمان می باشد می توانید از ... پیگیری بفرمایید</value>
+  </data>
+  <data name="ObjectToTheOpinionOfTheProvincialCommissionForLicenseRequest" xml:space="preserve">
+    <value>اعتراض شما برای رای کمیسیون استان در تاریخ {0} برای درخواست پروانه ثبت شد </value>
+  </data>
+  <data name="OldPasswordInvalid" xml:space="preserve">
+    <value>رمز عبور وارد شده فعلی صحیح نمی باشد</value>
+  </data>
+  <data name="OldPasswordInvalid1" xml:space="preserve">
+    <value>رمز عبور وارد شده فعلی صحیح نمی باشد</value>
+  </data>
+  <data name="OnlinePaymentError" xml:space="preserve">
+    <value>پرداخت آنلاین شما با کد پیگیری {0} با خطا مواجه شده است</value>
+  </data>
+  <data name="ParentIdIsNotValid" xml:space="preserve">
+    <value>مقدار انتخاب شده برای مقدار دسته بندی والد صحیح نمی باشد</value>
+  </data>
+  <data name="ParentIdIsNotValid1" xml:space="preserve">
+    <value>مقدار انتخاب شده برای مقدار دسته بندی والد صحیح نمی باشد</value>
+  </data>
+  <data name="PasswordPolicyInvalid" xml:space="preserve">
+    <value>رمز عبور باید حداقل 8 کاراکتر باشد</value>
+  </data>
+  <data name="PasswordPolicyInvalid1" xml:space="preserve">
+    <value>رمز عبور باید حداقل 8 کاراکتر باشد</value>
+  </data>
+  <data name="PaymentLicenseRequestSuccessAndWatingForCheckProvinceManger" xml:space="preserve">
+    <value>هزینه درخواست پروانه شما در تاریخ {0} با موفقیت انجام شد ، در انتظار بررسی درخواست توسط رییس نظام استان می باشد.</value>
+  </data>
+  <data name="PaymentSuccessAndOpenFormLicenseRequest" xml:space="preserve">
+    <value>هزینه پرداخت ارزشیابی در تاریخ {0} با موفقیت انجام شد ، شما می توانید در سامانه سایر مدارک مورد نیاز برای درخواست پروانه خود اقدام نمایید.</value>
+  </data>
+  <data name="PaymentWasSuccessful" xml:space="preserve">
+    <value>پرداخت با موفقیت انجام شد</value>
+  </data>
+  <data name="PaymentWasUnsuccessful" xml:space="preserve">
+    <value>پرداخت ناموفق </value>
+  </data>
+  <data name="PhoneNumberAlreadyExists" xml:space="preserve">
+    <value>شماره موبایل قبلا در سامانه ثبت شده است</value>
+  </data>
+  <data name="PhoneNumberIsAlreadyRegistered" xml:space="preserve">
+    <value> تلفن همراه قبلا ثبت شده است</value>
+  </data>
+  <data name="PleaseCompleteForm" xml:space="preserve">
+    <value>لطفا داده همه کنترل های فرم را وارد کنید</value>
+  </data>
+  <data name="PleaseCompleteForm1" xml:space="preserve">
+    <value>لطفا داده همه کنترل های فرم را وارد کنید</value>
+  </data>
+  <data name="PrintAndSendCardSuccess" xml:space="preserve">
+    <value> چاپ و  ارسال ارسال کارت در تاریخ {0} انجام شد ، کد مرسوله پست {1}  برای دریافت کارت می باشد</value>
+  </data>
+  <data name="ProvinceSecretaryPrimaryAcceptForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  توسط دبیر استان تایید شد و در انتظار  پرداخت هزینه ارزشیابی توسط شما می باشد.</value>
+  </data>
+  <data name="ProvinceSecretaryRejectForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  توسط دبیر استان رد شد .</value>
+  </data>
+  <data name="ProvincialCommissionAcceptForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  توسط کمیسیون استان تایید شد و در انتظار  پرداخت هزینه کارشناسی بازدید توسط شما می باشد.</value>
+  </data>
+  <data name="ProvincialCommissionRejectForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما پس از بررسی مجدد در تاریخ {0}  توسط کمیسیون استان رد شد </value>
+  </data>
+  <data name="ProvincialCommissionRejectForLicenseRequestWithObject" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  توسط کمیسیون استان رد شد و شما می توانید تا 7 روز آینده فرصت اعتراض به رای کمیسیون استان را دارید</value>
+  </data>
+  <data name="RegisterSuccessful" xml:space="preserve">
+    <value>ثبت نام با موفقیت انجام شد</value>
+  </data>
+  <data name="RejectDegree" xml:space="preserve">
+    <value>رد مدرک تحصیلی در تاریخ {0} انچام شد</value>
+  </data>
+  <data name="RejectOrder" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0} رد شد</value>
+  </data>
+  <data name="RejectRegisterPayment" xml:space="preserve">
+    <value> پرداخت درخواست عضویت شما در تاریخ {0} رد شد</value>
+  </data>
+  <data name="RejectRegisterRequest" xml:space="preserve">
+    <value>درخواست عضویت شما در تاریخ {0} رد شد</value>
+  </data>
+  <data name="RejectRequestAfterReviewRequestByProvinceSecretaryForLicenseRequest" xml:space="preserve">
+    <value>رد درخواست پروانه بعد از ارزیابی کارشناس ، توسط دبیر استان در تاریخ {0} رد شد</value>
+  </data>
+  <data name="RejectRequestBadBackgroundCertificate" xml:space="preserve">
+    <value>  رد درخواست عدم سوء پیشینه شما در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RejectRequestByProvinceMangerForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما توسط رییس نظام استان در تاریخ {0} رد شد</value>
+  </data>
+  <data name="RejectRequestIssueDuplicateCard" xml:space="preserve">
+    <value>رد درخواست صدور کارت المثنی در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RejectRequestMemberExtension" xml:space="preserve">
+    <value>  رد درخواست تمدید عضویت شما در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RejectRequestSuccessByUser" xml:space="preserve">
+    <value>رد درخواست توسط {0} انجام شد</value>
+  </data>
+  <data name="RejectUpgradeEducationRequest" xml:space="preserve">
+    <value>رد درخواست ارتقا مدرک تحصیلی شما در تاریخ {0} انجام می باشد</value>
+  </data>
+  <data name="RejectWithDestinationForMemberTransferRequest" xml:space="preserve">
+    <value>رد درخواست انتقال توسط استان مقصد در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RejectWithHeadquartersForMemberTransferRequest" xml:space="preserve">
+    <value> رد درخواست انتقال توسط سازمان در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RejectWithSourceForMemberTransferRequest" xml:space="preserve">
+    <value>رد درخواست انتقال توسط استان مبدا در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RequestReviewIssueDuplicateCardRequest" xml:space="preserve">
+    <value>درخواست صدورالمثنی کارت شما در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="RequestReviewMemberExtensionRequest" xml:space="preserve">
+    <value>درخواست تمدید عضویت شما در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="RequestReviewMemberTransferRequest" xml:space="preserve">
+    <value>درخواست انتقال شما در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="RequestReviewRegisterRequest" xml:space="preserve">
+    <value>درخواست عضویت در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="RequestReviewUpgradeEducationRequest" xml:space="preserve">
+    <value>درخواست ارتقا مدرک تحصیلی شما در تاریخ {0} در دست بررسی می باشد</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>اطلاعات را مشخص نمائید</value>
+  </data>
+  <data name="Required1" xml:space="preserve">
+    <value>اطلاعات را مشخص نمائید</value>
+  </data>
+  <data name="ResetEmailTemplate" xml:space="preserve">
+    <value>ایمیل تمپلیت ریست شد</value>
+  </data>
+  <data name="ResetPasswordFormat" xml:space="preserve">
+    <value>فرمت پسورد ریست شد</value>
+  </data>
+  <data name="ReturnByCustomer" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0} مرجوع شد</value>
+  </data>
+  <data name="ReturnOrderByCustomer" xml:space="preserve">
+    <value>درخواست مرجوعی شما ثبت گردید</value>
+  </data>
+  <data name="ReturnRequestToExpertForEditForLicenseRequest" xml:space="preserve">
+    <value>بازگشت درخواست پروانه شما توسط دبیر استان به کارشناس برای بررسی مجدد در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="RoleHasChildren" xml:space="preserve">
+    <value>نقش مورد نظر دارای زیر نقش می باشد و قابل حذف نیست </value>
+  </data>
+  <data name="RoleHasChildren1" xml:space="preserve">
+    <value>نقش مورد نظر دارای زیر نقش می باشد و قابل حذف نیست </value>
+  </data>
+  <data name="SaveSuccessful" xml:space="preserve">
+    <value>ذخیره سازی داده ها انجام شد</value>
+  </data>
+  <data name="SaveSuccessful1" xml:space="preserve">
+    <value>ذخیره سازی داده ها انجام شد</value>
+  </data>
+  <data name="SendCodeConfirmPhone" xml:space="preserve">
+    <value>کدی برای تایید شماره موبایل شما پیامک شد</value>
+  </data>
+  <data name="SendConfirmationEmail" xml:space="preserve">
+    <value>ایمیل Active سازی به آدرس ایمیل شما ارسال شد.برای Active کردن حساب کاربری باید از طریق ایمیل ارسالی اقدام نمایید</value>
+  </data>
+  <data name="SendConfirmationEmail1" xml:space="preserve">
+    <value>ایمیل Active سازی به آدرس ایمیل شما ارسال شد.برای Active کردن حساب کاربری باید از طریق ایمیل ارسالی اقدام نمایید</value>
+  </data>
+  <data name="SendConfirmationPhoneNumber" xml:space="preserve">
+    <value>حساب کاربری شما ایجاد شد ، برای فعال کردن کد ارسالی را وارد نمایید</value>
+  </data>
+  <data name="SendConfrimationEmail" xml:space="preserve">
+    <value>ایمیل Active سازی حساب کاربری</value>
+  </data>
+  <data name="SendConfrimationEmail1" xml:space="preserve">
+    <value>ایمیل Active سازی حساب کاربری</value>
+  </data>
+  <data name="SendingOrder" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0} آماده برای ارسال می باشد</value>
+  </data>
+  <data name="SendRequestToExpertForLicenseRequest" xml:space="preserve">
+    <value>درخواست پروانه شما در تاریخ {0}  برای کارشناس جهت بازدید ارسال شد.</value>
+  </data>
+  <data name="SendRequestToRepresentativeOfTheOrganizationForLicenseRequest" xml:space="preserve">
+    <value>ارسال درخواست پروانه شما برای نماینده سازمان در تاریخ {0} انجام شد</value>
+  </data>
+  <data name="SendSmsForForgetPasswordSuccess" xml:space="preserve">
+    <value>کد بازنشانی رمز عبور به شماره موبایل شما پیامک شد </value>
+  </data>
+  <data name="SendSmsSuccess" xml:space="preserve">
+    <value>پیامک ارسال شد</value>
+  </data>
+  <data name="SentOrder" xml:space="preserve">
+    <value>سفارش خرید شما در تاریخ {0}  ارسال شد</value>
+  </data>
+  <data name="SpecifyTheNewPassword" xml:space="preserve">
+    <value>رمز عبور جدید را مشخص کنید</value>
+  </data>
+  <data name="SuccessTheOperation" xml:space="preserve">
+    <value>عملیات با موفقیت انجام شد</value>
+  </data>
+  <data name="SuccessTheOperation1" xml:space="preserve">
+    <value>عملیات با موفقیت انجام شد</value>
+  </data>
+  <data name="ThisUserExiste" xml:space="preserve">
+    <value>این حساب کاربری قبلا ثبت نام شده است</value>
+  </data>
+  <data name="UpdateSuccessful" xml:space="preserve">
+    <value>بروزرسانی با موفقیت انجام شد</value>
+  </data>
+  <data name="UpdateSuccessful1" xml:space="preserve">
+    <value>بروزرسانی با موفقیت انجام شد</value>
+  </data>
+  <data name="UploadFiles" xml:space="preserve">
+    <value>فایل ها را بارگذاری کنید</value>
+  </data>
+  <data name="UseIndexTemplateInDashboardDesign" xml:space="preserve">
+    <value>این شاخص در طراحی داشبوردها استفاده شده است</value>
+  </data>
+  <data name="UseIndexTemplateInDashboardDesign1" xml:space="preserve">
+    <value>این شاخص در طراحی داشبوردها استفاده شده است</value>
+  </data>
+  <data name="UserAccountConfimationSuccess" xml:space="preserve">
+    <value>Active سازی حساب کاربری شما انجام شد</value>
+  </data>
+  <data name="UserAccountConfimationSuccess1" xml:space="preserve">
+    <value>Active سازی حساب کاربری شما انجام شد</value>
+  </data>
+  <data name="UserAccountDisabled" xml:space="preserve">
+    <value>حساب کاربری غیر فعال است</value>
+  </data>
+  <data name="UserAuthenticateSuccessful" xml:space="preserve">
+    <value>احراز هویت با موفقیت انجام شد</value>
+  </data>
+  <data name="UserAuthenticateSuccessful1" xml:space="preserve">
+    <value>احراز هویت با موفقیت انجام شد</value>
+  </data>
+  <data name="UserIsDeActive" xml:space="preserve">
+    <value>حساب کاربری شما غیر فعال میباشد</value>
+  </data>
+  <data name="YouCannotLogin" xml:space="preserve">
+    <value>شما تا 15 دقیقه اجازه ی ورود ندارید</value>
+  </data>
+  <data name="YouDoNotHaveAccess" xml:space="preserve">
+    <value>شما دسترس به این قسمت ندارید</value>
+  </data>
+  <data name="YourPhoneNumberIsAccept" xml:space="preserve">
+    <value>شماره موبایل شما تایید شد</value>
+  </data>
+  <data name="ZeroRecordUpdate" xml:space="preserve">
+    <value>تغییری در داده های ارسالی نسبت به قبل پیدا نشد</value>
+  </data>
+  <data name="ZeroRecordUpdate1" xml:space="preserve">
+    <value>تغییری در داده های ارسالی نسبت به قبل پیدا نشد</value>
+  </data>
+</root>

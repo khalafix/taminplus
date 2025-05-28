@@ -1,0 +1,70 @@
+/* :where() gives the styles specificity 0, which makes them overridable */
+:where(.vi__wrapper) {
+ direction: ltr !important;
+  position: relative;
+  width: min-content;
+
+}
+/* @font-face {
+  font-family: IRANSans2;
+  font-style: normal;
+  src: url("assets/fonts/IRANSansWeb(FaNum).woff") format("woff");
+} */
+
+
+.vi {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  color: transparent;
+  background: transparent;
+  caret-color: transparent;
+  outline: none;
+  border: 0 none transparent;
+  /* font-family: 'IRANSans2' !important; */
+
+}
+
+.vi::selection {
+  background: transparent;
+
+}
+
+:where(.vi__container) {
+  display: flex;
+  gap: 8px;
+  height: 50px;
+  width: 300px;
+
+}
+
+:where(.vi__character) {
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 50px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: default;
+  user-select: none;
+  box-sizing: border-box;
+
+}
+
+:where(.vi__character--inactive) {
+  color: dimgray;
+  background-color: lightgray;
+
+}
+
+:where(.vi__character--selected) {
+  outline: 2px solid cornflowerblue;
+  color: cornflowerblue;
+
+}
