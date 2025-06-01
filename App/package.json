@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node server.js"
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && node server.js"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",

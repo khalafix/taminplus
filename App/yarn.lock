@@ -2193,16 +2193,6 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
-mmenu-js@^9.2.2:
-  version "9.2.2"
-  resolved "https://registry.yarnpkg.com/mmenu-js/-/mmenu-js-9.2.2.tgz#b79d426b028092e468983761812668b9aa8f7743"
-  integrity sha512-NrvM0rOtAfukJ0Radsv2526Tt6wSq53ZJmGkaLi+4E9FbWqxlc59ZKYzzxKX4QK36rZ11Kg/dTYl94FRhd9LWw==
-
-mmenu-light@^3.0.7:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/mmenu-light/-/mmenu-light-3.2.1.tgz#bf6d45a65ab0704e52d7a4fc5496020e9fb9bd32"
-  integrity sha512-p7pGBea9Q//YWp3ce+sUr7037Qu9N8n6V41ib8ZQ055pGkJ6j0mxvM0ioCMBYOjuZR9D1SJHKQ3s5Sf5m4W0gg==
-
 moment@^2.26.0:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
