@@ -719,48 +719,74 @@ namespace Application.Services.Catalog
         public async Task<GoldiranActionResult<List<FeatureProductDto>>> GetFeatureOptionByCategory(string category)
         {
             var result = new GoldiranActionResult<List<FeatureProductDto>>();
-
-            var list = new List<TreeDto>();
+            var featureValues = new List<FeatureProductDto>();
 
             category = DataUtility.RemoveDashForTitle(category);
 
-            var categoryItem = await context.ProductCategories.FirstOrDefaultAsync(f => f.CategoryName == category || f.EnName == category);
+            var categoryItem = await context.ProductCategories
+                .FirstOrDefaultAsync(f => f.CategoryName == category || f.EnName == category);
 
-
-
-            var childRoles = await context.Products.Include(i => i.Category.Features).Include(q => q.FeatureValues).ThenInclude(q => q.ProductCategoryFeature.Feature)
-                .Where(q => q.CategoryId == categoryItem.Id && q.IsActive).Select(q => new { q.Id, q.FeatureValues, q.EnName, q.ProductName, q.Category.Features, q.Brand.Title }).ToListAsync();
-
-            var featureValues = new List<FeatureProductDto>();
-
-            childRoles.ForEach(q => featureValues.Add(new FeatureProductDto
+            if (categoryItem == null)
             {
-                ProductEnName = q.EnName,
-                ProductName = q.ProductName,
-                BrandName = q.Title,
-                FeatureValue = q.FeatureValues.FirstOrDefault(q => q.ProductCategoryFeature.FeatureId == categoryItem.MainFeatureId)?.FeatureValue
-            }));
+                result.IsSuccess = false;
+                result.Message = "دسته‌بندی پیدا نشد";
+                return result;
+            }
 
-            featureValues = featureValues.GroupBy(q => q.FeatureValue).Select(q => new FeatureProductDto
-            {
-                Key = q.Key,
-                FeatureValue = q.Key,
-                Brands = q.Select(r => new FeatureProductDto()
+            var childRoles = await context.Products
+                .Include(i => i.Category.Features)
+                .Include(q => q.FeatureValues)
+                    .ThenInclude(q => q.ProductCategoryFeature.Feature)
+                .Where(q => q.CategoryId == categoryItem.Id && q.IsActive)
+                .Select(q => new
                 {
-                    BrandName = r.BrandName,
-                    ProductName = r.ProductName,
-                    FeatureValue = r.FeatureValue,
-                    ProductEnName = r.ProductEnName,
-                }).ToList(),
+                    q.Id,
+                    q.FeatureValues,
+                    q.EnName,
+                    q.ProductName,
+                    q.Category.Features,
+                    BrandName = q.Brand.Title
+                })
+                .ToListAsync();
 
-            }).ToList();
+            foreach (var product in childRoles)
+            {
+                var featureValue = product.FeatureValues
+                    .FirstOrDefault(f => f.ProductCategoryFeature.FeatureId == categoryItem.MainFeatureId)?.FeatureValue;
 
+                if (!string.IsNullOrEmpty(featureValue))
+                {
+                    featureValues.Add(new FeatureProductDto
+                    {
+                        ProductEnName = product.EnName,
+                        ProductName = product.ProductName,
+                        BrandName = product.BrandName,
+                        FeatureValue = featureValue
+                    });
+                }
+            }
 
+            var grouped = featureValues
+                .GroupBy(f => f.FeatureValue)
+                .Select(group => new FeatureProductDto
+                {
+                    Key = group.Key,
+                    FeatureValue = group.Key,
+                    Brands = group.Select(f => new FeatureProductDto
+                    {
+                        BrandName = f.BrandName,
+                        ProductName = f.ProductName,
+                        ProductEnName = f.ProductEnName,
+                        FeatureValue = f.FeatureValue
+                    }).ToList()
+                })
+                .ToList();
 
-            result.Data = featureValues;
+            result.Data = grouped;
             result.IsSuccess = true;
             return result;
         }
+
 
 
 
