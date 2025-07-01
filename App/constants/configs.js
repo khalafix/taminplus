@@ -14,8 +14,8 @@ export const ServerFileIdentifier = () => {
   return isProd ? "https://api.taminplus.com/" : "http://localhost:44316/";
 };
 
-// `yarn dev`        => اجرای دیباگ
 // `yarn build:dev`  => بیلد پروژه در حالت دولوپ
+// `yarn dev`        => اجرای دولوپ
 
 // `yarn build:prod` => بیلد پروژه در حالت پروداکشن
-// `yarn start`      =>  اجرای سرور در حالت پروداکشن از روی بیلد تولیدی
+// `yarn start`      =>  اجرای پروداکشن
