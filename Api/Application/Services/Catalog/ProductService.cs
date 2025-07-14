@@ -910,16 +910,27 @@ namespace Application.Services.Catalog
         public async Task<GoldiranActionResult<SimilarProductInputDto>> GetSimilarProductById(int id)
         {
             var result = new GoldiranActionResult<SimilarProductInputDto>();
-            var similarProducts = await context.SimilarProducts.Include(i => i.Product).OrderByDescending(o => o.CreateDate).Where(w => w.ProductId == id).Select(s => new SimilarProductSelectedDto
-            {
-                ProductId = s.SimilarId,
-                ProductTitle = s.Similar.ProductName,
-            }).ToListAsync();
+
+            var similarProducts = await context.SimilarProducts
+                .Include(i => i.Product)
+                .Include(i => i.Similar)
+                .Where(w => w.ProductId == id && w.Similar.IsActive == true)
+                .OrderByDescending(o => o.CreateDate)
+                .Select(s => new SimilarProductSelectedDto
+                {
+                    ProductId = s.SimilarId,
+                    ProductTitle = s.Similar.ProductName,
+                })
+                .ToListAsync();
 
             var model = new SimilarProductInputDto()
             {
                 ProductId = id,
-                Remark = context.SimilarProducts.FirstOrDefault(f => f.ProductId == id)?.Remark,
+                Remark = await context.SimilarProducts
+                    .Where(f => f.ProductId == id)
+                    .Select(f => f.Remark)
+                    .FirstOrDefaultAsync(),
+
                 SimilarProducts = similarProducts
             };
 
@@ -927,49 +938,74 @@ namespace Application.Services.Catalog
             result.Data = model;
             return result;
         }
+
         public async Task<GoldiranActionResult<UserSimilarProductDto>> GetUserSimilarProductByTitle(string title)
         {
             title = DataUtility.RemoveDashForTitle(title);
-            var product = await context.Products.FirstOrDefaultAsync(f => f.ProductName == title || f.EnName == title);
+            var product = await context.Products
+                .FirstOrDefaultAsync(f => f.ProductName == title || f.EnName == title);
 
             var result = new GoldiranActionResult<UserSimilarProductDto>();
-            if (product ==null)
-            {
 
+            if (product == null)
+            {
                 result.IsSuccess = true;
                 return result;
             }
-            var data = await context.SimilarProducts.Include(i=>i.Similar.ProductCoverAttachments).Include(i => i.Product)
-                .Include(i => i.Similar.FinancialProducts).Where(w => w.ProductId == product.Id).ToListAsync();
+            var data = await context.SimilarProducts
+                .Include(i => i.Similar.ProductCoverAttachments)
+                .Include(i => i.Product)
+                .Include(i => i.Similar.FinancialProducts)
+                .Where(w => w.ProductId == product.Id && w.Similar.IsActive == true)
+                .ToListAsync();
 
             var similarProducts = data.Select(s => new SimilarProductSelectedDto
             {
                 ProductId = s.SimilarId,
                 ProductTitle = s.Similar.ProductName,
                 EnTitle = s.Similar.EnName,
-                CoverFile = s.Similar.ProductCoverAttachments.Count > 0 ? s.Similar.ProductCoverAttachments.FirstOrDefault().FilePath : "",
-                Price = s.Similar.IsShowAlert == true ? 0 : GetUserProductPrice(s.Similar.GetInventoryFromApi, s.Similar.APIAmount, s.Similar.FinancialProducts),
-                IsShowAlert = s.Similar.IsShowAlert,    
-                DiscountedPrice = s.Similar.IsShowAlert == true ? 0 : s.Similar.FinancialProducts.Count() > 0 ? s.Similar.FinancialProducts.OrderByDescending(o => o.CreateDate).FirstOrDefault().DiscountedPrice : 0,
+                CoverFile = s.Similar.ProductCoverAttachments.Count > 0
+                    ? s.Similar.ProductCoverAttachments.FirstOrDefault().FilePath
+                    : "",
+                Price = s.Similar.IsShowAlert == true
+                    ? 0
+                    : GetUserProductPrice(s.Similar.GetInventoryFromApi, s.Similar.APIAmount, s.Similar.FinancialProducts),
+                IsShowAlert = s.Similar.IsShowAlert,
+                DiscountedPrice = s.Similar.IsShowAlert == true
+                    ? 0
+                    : s.Similar.FinancialProducts.Count() > 0
+                        ? s.Similar.FinancialProducts.OrderByDescending(o => o.CreateDate).FirstOrDefault().DiscountedPrice
+                        : 0,
             }).ToList();
 
-
+            // اگر محصول مشابهی پیدا نشد، بر اساس دسته‌بندی محصول اصلی مشابه‌ها را بیاور (فقط فعال‌ها)
             if (similarProducts.Count == 0)
             {
-                var similardataTemp = await context.Products.Include(i => i.ProductCoverAttachments)
-                .Include(i => i.FinancialProducts).Where(w => w.CategoryId == product.CategoryId && w.Id != product.Id).ToListAsync();
+                var similardataTemp = await context.Products
+                    .Include(i => i.ProductCoverAttachments)
+                    .Include(i => i.FinancialProducts)
+                    .Where(w => w.CategoryId == product.CategoryId && w.Id != product.Id && w.IsActive == true)
+                    .ToListAsync();
 
                 similarProducts = similardataTemp.Select(s => new SimilarProductSelectedDto
                 {
                     IsShowAlert = s.IsShowAlert,
                     ProductTitle = s.ProductName,
                     EnTitle = s.EnName,
-                    CoverFile = s.ProductCoverAttachments.Count > 0 ? s.ProductCoverAttachments.FirstOrDefault().FilePath : "",
-                    Price = s.IsShowAlert ==true ? 0 : GetUserProductPrice(s.GetInventoryFromApi, s.APIAmount, s.FinancialProducts),
-                    DiscountedPrice = s.IsShowAlert == true ? 0 : s.FinancialProducts.Count() > 0 ? s.FinancialProducts.OrderByDescending(o => o.CreateDate).FirstOrDefault().DiscountedPrice : 0,
+                    CoverFile = s.ProductCoverAttachments.Count > 0
+                        ? s.ProductCoverAttachments.FirstOrDefault().FilePath
+                        : "",
+                    Price = s.IsShowAlert == true
+                        ? 0
+                        : GetUserProductPrice(s.GetInventoryFromApi, s.APIAmount, s.FinancialProducts),
+                    DiscountedPrice = s.IsShowAlert == true
+                        ? 0
+                        : s.FinancialProducts.Count() > 0
+                            ? s.FinancialProducts.OrderByDescending(o => o.CreateDate).FirstOrDefault().DiscountedPrice
+                            : 0,
                 }).ToList();
-
             }
+
             var model = new UserSimilarProductDto()
             {
                 Id = product.Id,
@@ -980,6 +1016,7 @@ namespace Application.Services.Catalog
             result.Data = model;
             return result;
         }
+
         public async Task<GoldiranActionResult<int>> AddSimilarProduct(SimilarProductInputDto model)
         {
             var result = new GoldiranActionResult<int>();
