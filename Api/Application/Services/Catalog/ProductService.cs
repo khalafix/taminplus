@@ -914,7 +914,7 @@ namespace Application.Services.Catalog
             var similarProducts = await context.SimilarProducts
                 .Include(i => i.Product)
                 .Include(i => i.Similar)
-                .Where(w => w.ProductId == id && w.Similar.IsActive == true)
+                .Where(w => w.ProductId == id )
                 .OrderByDescending(o => o.CreateDate)
                 .Select(s => new SimilarProductSelectedDto
                 {
