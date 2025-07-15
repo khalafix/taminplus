@@ -7,7 +7,7 @@ import { getCookie, getUrl, getUserid } from "helpers/Helpers";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import Swal from "sweetalert2";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import {
@@ -88,7 +88,19 @@ const Checkout = (props) => {
   const toggleCard = () => {
     setIsCardOpen(!isCardOpen);
   };
-
+  useEffect(() => {
+    Swal.fire({
+      title: "توجه!",
+      text: "هزینه ارسال کالا بر عهده مشتری می‌باشد",
+      icon: "info",
+      confirmButtonText: "فهمیدم",
+      confirmButtonColor: "#3085d6",
+      background: "#fffbe6",
+      customClass: {
+        popup: "rtl-alert",
+      },
+    });
+  }, []);
   const popover = (
     <Popover id="popover-basic">
       {/* <Popover.Title as="h3">Popover right</Popover.Title> */}
@@ -282,16 +294,6 @@ const Checkout = (props) => {
                         .map((q) => q.itemCount)
                         .reduce((total, num) => total + num)}{" "}
                       کالا )
-                      <span
-                        style={{
-                          padding: "10px",
-                          backgroundColor: "yellow",
-                          color: "red",
-                          margin: "10px",
-                        }}
-                      >
-                        هزینه ارسال کالا بر عهده مشتری می باشد
-                      </span>
                     </h6>
 
                     <ActionButton />
