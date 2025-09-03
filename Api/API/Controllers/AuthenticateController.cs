@@ -1,12 +1,11 @@
 ﻿using Application.Interfaces;
-using Infrastructure.Models.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Infrastructure.Common;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Caching.Memory;
-using Infrastructure.Resources;
 using BIDashboard.Dtos.User;
-using Realms.Sync;
+using Infrastructure.Common;
+using Infrastructure.Models.Authorization;
+using Infrastructure.Resources;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 
 namespace API.Controllers
 {
@@ -49,7 +48,7 @@ namespace API.Controllers
         [HttpPost("SendSmsAgain")]
         public async Task<IActionResult> SendSmsAgain(UserIsExsitsDto model)
         {
-      
+
             var result = await _authenticationService.CheckUserIsExsits(model.PhoneNumber);
             return Ok(result);
         }
@@ -169,38 +168,38 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(LoginDto model)
         {
-            var ip = HttpContext.Connection.RemoteIpAddress.ToString();
-            var browser = Request.Headers["User-Agent"].ToString();
+            //var ip = HttpContext.Connection.RemoteIpAddress.ToString();
+            //var browser = Request.Headers["User-Agent"].ToString();
 
-            var captchaValueFromCache = cache.Get<string>(model.CaptchaKey);
-            if (captchaValueFromCache == null || captchaValueFromCache != model.Captcha)
-            {
-                var captchaResult = new GoldiranActionResult<string>();
-                captchaResult.IsSuccess = false;
-                captchaResult.Message = Messages.CaptchaInvalid;
-                return Ok(captchaResult);
-            }
+            //var captchaValueFromCache = cache.Get<string>(model.CaptchaKey);
+            //if (captchaValueFromCache == null || captchaValueFromCache != model.Captcha)
+            //{
+            //    var captchaResult = new GoldiranActionResult<string>();
+            //    captchaResult.IsSuccess = false;
+            //    captchaResult.Message = Messages.CaptchaInvalid;
+            //    return Ok(captchaResult);
+            //}
 
-            var result = await _authenticationService.LoginAsync(model, ip, browser);
+            var result = await _authenticationService.LoginAsync(model, "192.168.1.1", "chrome");
             return Ok(result);
         }
 
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginDto model)
         {
-            var ip = HttpContext.Connection.RemoteIpAddress.ToString();
+            //var ip = HttpContext.Connection.RemoteIpAddress.ToString();
 
-            var browser = Request.Headers["User-Agent"].ToString();
+            //var browser = Request.Headers["User-Agent"].ToString();
 
-            var captchaValueFromCache = cache.Get<string>(model.CaptchaKey);
-            if (captchaValueFromCache == null || captchaValueFromCache != model.Captcha)
-            {
-                var captchaResult = new GoldiranActionResult<string>();
-                captchaResult.IsSuccess = false;
-                captchaResult.Message = Messages.CaptchaInvalid;
-                return Ok(captchaResult);
-            }
-            var result = await _authenticationService.CustomerLoginAsync(model, ip, browser);
+            //var captchaValueFromCache = cache.Get<string>(model.CaptchaKey);
+            //if (captchaValueFromCache == null || captchaValueFromCache != model.Captcha)
+            //{
+            //    var captchaResult = new GoldiranActionResult<string>();
+            //    captchaResult.IsSuccess = false;
+            //    captchaResult.Message = Messages.CaptchaInvalid;
+            //    return Ok(captchaResult);
+            //}
+            var result = await _authenticationService.CustomerLoginAsync(model, "192.168.1.1", "chrome");
             return Ok(result);
         }
 
@@ -231,7 +230,7 @@ namespace API.Controllers
         [HttpGet("SendSMS")]
         public async Task<IActionResult> SendSMS(string? mobile = "09125715530")
         {
-            var result =  await smsUtility.Send(mobile, "سلام...فروشگاه تامین پلاس...درم بخت");
+            var result = await smsUtility.Send(mobile, "سلام...فروشگاه تامین پلاس...درم بخت");
             return Ok(new { ResultCode = result });
         }
     }

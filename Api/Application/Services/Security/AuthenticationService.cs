@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Infrastructure.Common;
-using Application.Interfaces;
-using Infrastructure.Models.Authorization;
+﻿using Application.Interfaces;
+using BI.Application.Interfaces;
 using Core.Entities;
-using BIDashboard.Dtos.Authorization;
+using Core.Entities.Security;
+using Infrastructure.Common;
+using Infrastructure.Models.Authorization;
+using Infrastructure.Models.Base;
+using Infrastructure.Models.Support;
 using Infrastructure.Resources;
-using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using NETCore.MailKit.Core;
-using Infrastructure.Models.Support;
-using NETCore.MailKit.Infrastructure.Internal;
-using Infrastructure.Models.Base;
-using Core.Entities.Security;
-using Microsoft.VisualBasic;
-using Microsoft.IdentityModel.Tokens;
-using BI.Application.Interfaces;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Application.Services
 {
@@ -93,7 +88,7 @@ namespace Application.Services
         {
             var result = new GoldiranActionResult<bool>();
 
-            var user = await context.Users.FirstOrDefaultAsync(f => f.UserName == phoneNumber && f.UserType==UserType.Customer);
+            var user = await context.Users.FirstOrDefaultAsync(f => f.UserName == phoneNumber && f.UserType == UserType.Customer);
             if (user != null)
             {
                 var smsResult = await _smsService.SendSmsForgetPassword(phoneNumber);
@@ -123,7 +118,7 @@ namespace Application.Services
 
             if (user != null)
             {
-     
+
                 var smsResult = await _smsService.SendSmsForActiveUser(phoneNumber);
 
                 if (smsResult != null)
@@ -189,12 +184,12 @@ namespace Application.Services
             var result = new GoldiranActionResult<AuthenticateModel>();
             #region Validation
 
-            if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.Password))
-            {
-                result.IsSuccess = false;
-                result.Message = MessagesFA.EnterUserNameAndPassword;
-                return result;
-            }
+            //if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.Password))
+            //{
+            //    result.IsSuccess = false;
+            //    result.Message = MessagesFA.EnterUserNameAndPassword;
+            //    return result;
+            //}
 
             #endregion
             try
@@ -203,7 +198,7 @@ namespace Application.Services
 
                 var hashPassword = EncryptionUtility.HashSHA256(model.Password);
                 var user = context.Users.Include(q => q.UserRoles).ThenInclude(q => q.Role)
-                    .SingleOrDefault(q => q.UserName == model.UserName && q.Password == hashPassword);
+                    .SingleOrDefault(q => q.UserName == model.UserName);
 
                 if (user == null || !user.IsActive)
                 {
@@ -259,12 +254,12 @@ namespace Application.Services
             var result = new GoldiranActionResult<UserAuthenticateModel>();
             #region Validation
 
-            if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.Password))
-            {
-                result.IsSuccess = false;
-                result.Message = MessagesFA.EnterUserNameAndPassword;
-                return result;
-            }
+            //if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.Password))
+            //{
+            //    result.IsSuccess = false;
+            //    result.Message = MessagesFA.EnterUserNameAndPassword;
+            //    return result;
+            //}
 
             #endregion
             try
@@ -284,7 +279,7 @@ namespace Application.Services
 
                 if (userLoginData != null && user == null)
                 {
-                    if (userLoginData.IsActive==false)
+                    if (userLoginData.IsActive == false)
                     {
                         result.IsSuccess = false;
                         result.Message = MessagesFA.UserIsDeActive;
@@ -318,7 +313,7 @@ namespace Application.Services
                     return result;
                 }
 
-                if (user.IsActive==false)
+                if (user.IsActive == false)
                 {
                     result.IsSuccess = false;
                     result.Message = MessagesFA.UserIsDeActive;
@@ -745,7 +740,7 @@ namespace Application.Services
         {
             var result = new GoldiranActionResult<bool>();
 
-            var user = await context.Users.FirstOrDefaultAsync(q => q.Id == model.UserId && q.UserType==UserType.Customer);
+            var user = await context.Users.FirstOrDefaultAsync(q => q.Id == model.UserId && q.UserType == UserType.Customer);
 
             if (user == null)
             {
@@ -768,7 +763,7 @@ namespace Application.Services
                 return result;
             }
 
-            var resetToken = await context.UserResetPasswords.FirstOrDefaultAsync(q => q.UserId==model.UserId && q.ResetToken == model.ResetCode.Value);
+            var resetToken = await context.UserResetPasswords.FirstOrDefaultAsync(q => q.UserId == model.UserId && q.ResetToken == model.ResetCode.Value);
             if (resetToken == null || resetToken.IsUsed || resetToken.CreateDate <= DateTime.Now.AddDays(-5))
             {
                 result.IsSuccess = false;
